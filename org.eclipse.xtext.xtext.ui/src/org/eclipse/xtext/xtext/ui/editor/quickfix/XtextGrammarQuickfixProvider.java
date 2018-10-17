@@ -463,7 +463,7 @@ public class XtextGrammarQuickfixProvider extends DefaultQuickfixProvider {
 					return;
 				}
 				
-				final Integer offset = document.readOnly(new IUnitOfWork<Integer, XtextResource>() {
+				final Integer offset = document.tryReadOnly(new IUnitOfWork<Integer, XtextResource>() {
 					
 					@Override
 					public Integer exec(XtextResource state) throws Exception {
